@@ -63,17 +63,16 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         
-        'changeLang'              => \App\Http\Middleware\ChangeLang::class,
-        'checkPassword'           => \App\Http\Middleware\CheckPassword::class,
-        'checkToken'           => \App\Http\Middleware\CheckToken::class,
+        'changeLang'              => \App\Http\Middleware\ChangeLang::class, // for chang language
+        'checkPassword'           => \App\Http\Middleware\CheckPassword::class, // for check app password
+        'checkToken'              => \App\Http\Middleware\CheckToken::class, // check auth token
+        'auto-check-permission'   => \App\Http\Middleware\AutoCheckPermission::class, // check permission
+        
         'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
         'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
         'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
         'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
         'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
-        'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-        'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
-        'auto-check-permission' => Middleware\AutoCheckPermission::class,
         
     ];
 }

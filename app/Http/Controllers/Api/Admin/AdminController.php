@@ -24,6 +24,15 @@ class AdminController extends Controller
 
     }
 
+    public function create(){
+        try{
+            $role = Role::all();
+            return responseJson(1, 'Success', $role);
+        }catch(\Exception $ex){
+            return responseJson(0, 'Error, There Is Something Wrong');
+        }
+    }
+
     public function store(Request $request){
 
         try{
@@ -60,15 +69,6 @@ class AdminController extends Controller
             return responseJson(0, 'There Is Something Wrong');
         }
 
-    }
-
-    public function create(){
-        try{
-            $role = Role::all();
-            return responseJson(1, 'Success', $role);
-        }catch(\Exception $ex){
-            return responseJson(0, 'Error, There Is Something Wrong');
-        }
     }
 
     public function info(Request $request, $id){

@@ -36,7 +36,7 @@ class MainCategoryController extends Controller
             // save in database
             $category = Category::create($request->only(['slug']));
             // save translation
-            $category->name = $request->name;
+            $category->translateOrNew('en')->name = $request->name;
             $category->save();
             DB::commit();
             return responseJson(1, 'Added Has Been Done');
@@ -85,7 +85,7 @@ class MainCategoryController extends Controller
                     $category->slug = $request->slug
                 ]);
                 // edit translation
-                $category->name = $request->name;
+                $category->translateOrNew('en')->name = $request->name;
                 $category->save();
                 DB::commit();
                 return responseJson(1, 'The Change Has Been Done');

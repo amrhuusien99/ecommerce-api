@@ -51,7 +51,7 @@ class SubCategoryController extends Controller
             DB::beginTransaction();
             $category = Category::create($request->only(['slug', 'parent_id']));
             // add translation 
-            $category->name = $request->name;
+            $category->translateOrNew('en')->name = $request->name;
             $category->save();
             DB::commit();
             return responseJson(1, 'Added Has Been Done');

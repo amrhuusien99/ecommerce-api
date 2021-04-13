@@ -242,7 +242,6 @@ class PaymentController extends Controller
                     'client_Phone' => $order->user_phone,
                     'address' => $order->address,
                     'total_cost' => $order->total_cost,
-                    'commission' => $order->commission,
                 ]; 
 
                 // fire event on order complete success for notification

@@ -34,7 +34,7 @@ class Category extends Model
 
     public function childrens()
     {
-        return $this -> hasMany(Self::class, 'parent_id');
+        return $this->hasMany(Self::class, 'parent_id');
     }
 
     public function scopeActive($query)

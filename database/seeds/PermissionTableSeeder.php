@@ -16,10 +16,12 @@ class PermissionTableSeeder extends Seeder
 
             // routes admin 
             $Permission = ['name' => 'Admins Show', 'route_name' => 'admin/index'],
+            $Permission = ['name' => 'Admin create', 'route_name' => 'admin/create'],
             $Permission = ['name' => 'Admin Add', 'route_name' => 'admin/store'],
             $Permission = ['name' => 'Admin Delete', 'route_name' => 'admin/delete'],
             $Permission = ['name' => 'Admin Activate', 'route_name' => 'admin/activate'],
             $Permission = ['name' => 'Admin UnActivate', 'route_name' => 'admin/deactivate'],
+            $Permission = ['name' => 'Admin role', 'route_name' => 'admin/role'],
 
             // routes role 
             $Permission = ['name' => 'Roles Show', 'route_name' => 'admin/roles/index'],
@@ -46,9 +48,10 @@ class PermissionTableSeeder extends Seeder
             $Permission = ['name' => 'User UnActivate', 'route_name' => 'admin/users/deactivate'],
 
             // routes main categroy 
-            $Permission = ['name' => 'Main Categories Show', 'route_name' => 'main-category'],
+            $Permission = ['name' => 'Main Categories Show', 'route_name' => 'admin/main-category'],
             $Permission = ['name' => 'Main Category Add', 'route_name' => 'admin/main-category/store'],
             $Permission = ['name' => 'Main Category Edit', 'route_name' => 'admin/main-category/edit'],
+            $Permission = ['name' => 'Main Category Update', 'route_name' => 'admin/main-category/update'],
             $Permission = ['name' => 'Main Category Delete', 'route_name' => 'admin/main-category/delete'],
             $Permission = ['name' => 'Main Category Activate', 'route_name' => 'admin/main-category/activate'],
             $Permission = ['name' => 'Main Category UnActivate', 'route_name' => 'admin/main-category/deactivate'],
@@ -56,9 +59,11 @@ class PermissionTableSeeder extends Seeder
             $Permission = ['name' => 'Main Category Lang ES', 'route_name' => 'admin/main-category/lang_es'],
 
             // routes main categroy 
-            $Permission = ['name' => 'Sub Categories Show', 'route_name' => 'sub-category'],
+            $Permission = ['name' => 'Sub Categories Show', 'route_name' => 'admin/sub-category'],
+            $Permission = ['name' => 'Sub Category Create', 'route_name' => 'admin/sub-category/create'],
             $Permission = ['name' => 'Sub Category Add', 'route_name' => 'admin/sub-category/store'],
             $Permission = ['name' => 'Sub Category Edit', 'route_name' => 'admin/sub-category/edit'],
+            $Permission = ['name' => 'Sub Category Update', 'route_name' => 'admin/sub-category/update'],
             $Permission = ['name' => 'Sub Category Delete', 'route_name' => 'admin/sub-category/delete'],
             $Permission = ['name' => 'Sub Category Activate', 'route_name' => 'admin/sub-category/activate'],
             $Permission = ['name' => 'Sub Category UnActivate', 'route_name' => 'admin/sub-category/deactivate'],

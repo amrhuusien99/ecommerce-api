@@ -27,5 +27,6 @@ class AutoCheckPermission
             return responseJson(0, 'You Are Not Forbedine');
         }
         return $next($request);
+
     }
 }

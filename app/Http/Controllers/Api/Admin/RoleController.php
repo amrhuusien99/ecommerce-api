@@ -92,16 +92,6 @@ class RoleController extends Controller
             return $ex;
             return responseJson(0, 'There Is Something Wrong');
         }
-    }  
-    
-    public function show($id)
-    {
-        try{
-            $role = Role::findOrFail($id);
-            return responseJson(1, 'Success', $role);
-        }catch(\Exception $ex){
-            return responseJson(1, 'There Is Something Wrong');
-        }
     }
     
     public function delete($id)
